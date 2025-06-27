@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Billing Evaluator</title>
+</head>
+<body>
+    <h2>Utility Billing Expression Evaluator</h2>
+    <form method="post">
+        <label>Enter Expression:</label><br>
+        <input type="text" name="expression" style="width: 400px;" required>
+        <br><br>
+        <input type="submit" value="Evaluate">
+    </form>
+    <br>
+
+    <form method="post">
+        <input type="hidden" name="action" value="reset">
+        <input type="submit" value="Reset All Variables">
+    </form>
+
+    <form method="post">
+        <input type="hidden" name="action" value="view">
+        <input type="submit" value="View Variables">
+    </form>
+
+    {% if result %}
+        <h3>Result:</h3>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
